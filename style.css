@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+  background-color: #3085d6;
+  font-family:  "IBM Plex Sans", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+textarea{
+    border-radius: 8px;
+    padding: 1em;
+    text-align: justify;
+    width: 100%;
+    resize: none;
+    border: 1px solid #3085d6;
+    background-color:rgb(247, 247, 247);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    min-height: 350px;
+
+}
+
+p {
+    font-family:  "IBM Plex Sans", sans-serif;
+}
+
+.justify{
+    text-align: justify;
+
+}
+textarea:focus {
+  border: 3px solid #3085d6;
+  outline: none;
+  background-color: white;
+
+}
+
+
+
+#contador{
+    padding: 0.25em 0.75em;
+    /* border: solid 1px  #3085d6; */
+    margin-top: 1.2em;
+    border-radius: 25px;
+    width: fit-content;
+    font-size: 0.8em;
+}
+
+
+.wordcount-exceeded{
+    color: white;
+    border: solid red 4px;
+    background-color:red;
+    font-weight: 800;
+}
+            
+.wordcount-fulfilled{
+    color: white;
+    border: solid green 4px;
+    background-color: green;
+    font-weight: 800;
+}
+
+.wordcount-default{
+    color: lightgray
+}
+
+
+form{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+  border: 3px solid #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  max-width: 640px;
+  background-color: white;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.top {
+  padding: 10px;
+  background: #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+h2 {
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: normal;
+  margin-top: 0 !important;
+  position: relative;
+  display: block;
+  padding-bottom: 20px;   
+  margin-bottom: 0px;  
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #3085d6;
+  border-radius: 2px;
+}
+
+.content {
+  padding: 10px;
+  background-color: white;
+  margin: 12px;
+}
+
+
+#submit{
+    margin-top: 1em;
+    border-radius: 25px;
+    /* padding: 1em 4px; */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    flex-shrink: unset;
+    justify-content: center;
+    align-items: center;
+    background: #3085d6;
+    color: white;
+    border: none;
+}
+
+
+#submit:disabled{
+    opacity: 0.5
+}
+
+#submit:hover {
+    background-color: #2b74b9;
+}
+
+#submit:active {
+    background-color: #24629d;
+    transform: scale(0.98) translateY(1px);
+}
+
+/* Modal */
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* El fondo oscurecido detrás del modal */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#cerrarModal {
+  background-color: #3085d6;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Irish+Grover&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Monsieur+La+Doulaise&family=Montserrat&family=Open+Sans:wght@600&family=Pixelify+Sans:wght@400..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sixtyfour&family=Sixtyfour+Convergence&family=Tilt+Prism&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.ibm-plex-sans {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
